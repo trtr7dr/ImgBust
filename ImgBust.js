@@ -19,17 +19,12 @@ jQuery(function () {
             return false;
         }
         this.elem = jQuery(elem);
-        this.tag = jQuery(name);
         this.urls = urls;
         this.len = urls.length;
         this.speed = speed;
-        this.timer = '';
         this.step = 0;
         this.flag = false;
 
-        this.stop = function () {
-            this.flag = true;
-        };
         this.bust = function () {
             if (this.step === this.len - 1) {
                 this.step = 0;
@@ -48,5 +43,5 @@ jQuery(function () {
             }, this.speed, this);
         };
     }
-    //
+    // 
 });
